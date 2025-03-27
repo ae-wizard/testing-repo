@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: class_source     # Internal name for this source in dbt
+    database: "ae-class-project"   # The BigQuery project ID
+    schema: "class_source_data"    # The BigQuery dataset name
+    tables:
+      - name: sessions
+        description: "Sessions master table"
+      - name: transactions
+        description: "Transaction-level details"
+      - name: registrations
+        description: "Registration details"
